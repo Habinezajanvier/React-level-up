@@ -32,7 +32,7 @@ export default () => {
     }
   };
   return (
-    <form>
+    <form className="addingForm">
       <label>
         <input type="file" onChange={changeHandler} />
         <span>+</span>

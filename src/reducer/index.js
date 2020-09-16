@@ -4,5 +4,5 @@ import { combineReducers } from "redux";
 
 export default combineReducers({
   fileState: fileReducer,
-  logineState: loginReducer,
+  loginState: loginReducer,
 });

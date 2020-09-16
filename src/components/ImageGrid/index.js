@@ -18,7 +18,7 @@ export default () => {
         });
         dispatch(setDocs(document));
       });
-  }, ["images"]);
+  }, [dispatch]);
   const images = useSelector((state) => state.fileState.docs);
   const [imageUrl, setImageUrl] = useState(false);
   return (
