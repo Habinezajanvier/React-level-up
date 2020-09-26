@@ -1,3 +1,8 @@
 import fileReducer from "./file";
+import loginReducer from "./login";
+import { combineReducers } from "redux";
 
-export default { fileReducer };
+export default combineReducers({
+  fileState: fileReducer,
+  loginState: loginReducer,
+});

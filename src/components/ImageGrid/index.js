@@ -18,8 +18,8 @@ export default () => {
         });
         dispatch(setDocs(document));
       });
-  });
-  const images = useSelector((state) => state.docs);
+  }, [dispatch]);
+  const images = useSelector((state) => state.fileState.docs);
   const [imageUrl, setImageUrl] = useState(false);
   return (
     <React.Fragment>

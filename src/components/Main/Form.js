@@ -4,7 +4,7 @@ import { fileUpload, uploadError } from "../../action";
 import { motion } from "framer-motion";
 
 const Progress = () => {
-  const progress = useSelector((state) => state.progress);
+  const progress = useSelector((state) => state.fileState.progress);
   return progress !== 0 ? (
     <div className="progress_bar">
       <motion.div
@@ -17,7 +17,7 @@ const Progress = () => {
 
 export default () => {
   const dispatch = useDispatch();
-  const error = useSelector((state) => state.error);
+  const error = useSelector((state) => state.fileState.error);
   const changeHandler = (e) => {
     const selected = e.target.files[0];
     const accepted = ["image/png", "image/jpeg"];
@@ -32,7 +32,7 @@ export default () => {
     }
   };
   return (
-    <form>
+    <form className="addingForm">
       <label>
         <input type="file" onChange={changeHandler} />
         <span>+</span>

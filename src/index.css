@@ -47,13 +47,13 @@ header {
 header ul {
   width: 50%;
 }
-label input {
+.addingForm label input {
   height: 0;
   width: 0;
   opacity: 0;
   display: none;
 }
-label {
+.addingForm label {
   display: block;
   width: 30px;
   height: 30px;
@@ -68,7 +68,7 @@ label {
   align-items: center;
   justify-content: space-around;
 }
-label:hover {
+.addingForm label:hover {
   background: var(--primary);
   color: white;
 }
@@ -116,4 +116,48 @@ label:hover {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+}
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.upperCheckout {
+  background-color: white;
+  padding: 10px 20px 20px;
+  border-radius: 12px;
+  width: 50%;
+  min-height: 300px;
+}
+.upperCheckout div:first-child {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+}
+.auth form,
+.auth label {
+  width: 100%;
+}
+.auth input {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-bottom: 30px;
+  border-bottom: solid 2px var(--primary);
+}
+button {
+  background: var(--primary);
+  width: 46%;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.active {
+  background: sienna;
+  color: white;
 }
